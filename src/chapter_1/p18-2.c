@@ -1,9 +1,13 @@
+/*逆转顺序表*/
 
-void Reverse(Sqlist &L){
-    Elemtype temp;
-    for(i=0;i<L.length/2;i++){      // i < L.length/2 **
-        temp=L.data[i];
-        L.data[i]=L.data[L.length-i-1];
-        L.data[L.length-i-1]=temp;
+void Reverse(SqList &L){
+    int i=0, j=L.length-1;
+    ElemType temp;
+    for(i<L.length/2){
+        temp = L.data[i];
+        L.data[i]=L.data[j];
+        L.data[j]=temp;
+        i++;
+        j--;
     }
 }

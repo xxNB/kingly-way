@@ -1,13 +1,16 @@
 
-bool Del_s_t(Sqlist &L, ElemType s, ElemType t){
-    int i,k=0;    // k记录元素值在s到t之间元素de个数
-    if(L.length==0||s>t)
+/*从顺序表中删除s~t之间元素*/
+bool Del_4(SqList &L, ElemType s, ElemType t){
+    if(s>t||L.length==0)
         return false;
-    for(i=0;i<L.length;i++){
-        if (L.data[i]>=s&&L.data[i]<=t)    // 统计在范围内的个数
+    // 不在s与t之间的元素需左移动的次数k, 在s~t之间的元素始终占着位置,故k值是累加的
+    int k=0, i=0;
+    for(;i<L.length;i++){
+        if(s<=L.data[i]&&L.data[i]<=t)
             k++;
-        else 
-        L.data[i-k]=L.data[i];  // 不在范围之内的元素左移k个位置
+        else{
+        L.data[i-k]=L.data[i];
+                }
     }
     L.length-=k;
     return true;

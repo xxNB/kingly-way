@@ -1,3 +1,4 @@
+/*一维数组左移p个单位*/
 void Reverse(int R[], int from, int to){
     int i, temp;
     for(i=0; i<(to-from+1)/2;i++)
