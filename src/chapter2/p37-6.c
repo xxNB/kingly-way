@@ -11,6 +11,6 @@ void Sort(LinkList &L){
             pre=pre->next;     //在有序表中查找插入位置
         p->next=pre->next;   // 将*p插入到*pre之后
         pre->next=p;
-        p=r;                    
+        p=r;                 //扫描原单链表中剩下到结点
     }  
 }
