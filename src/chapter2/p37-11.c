@@ -7,7 +7,7 @@ void Split(LinkList &A){
     B->next=NULL;
     LNode *p=A->next, *q, *ra=A;   // q 为 头插法时使用
     while(p!=NULL){
-        ra->next=p;
+        ra->next=p; ra=p;
         p=p->next;
         q=p->next;
         p->next=B->next;
