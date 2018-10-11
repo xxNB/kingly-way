@@ -1,13 +1,15 @@
-void Del_X_3(LinkList &L, ElemType x){
-    LNode *p;         // 声明待删除结点为p
+/*删除不带头结点单链表L中的值为x结点*/
+
+void Del_link_1(LinkList &L, ElemType x){
+    LNode *p;
     if(L==NULL)
-        return;
+        return
     if(L->data==x){
         p=L;
         L=L->next;
         free(p);
-        Del_X_3(L,x);
+        Del_link_1(L);
     }
     else
-        Del_X_3(L->next,x);
+        Del_link_1(L=L->next);
 }

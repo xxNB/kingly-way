@@ -1,13 +1,14 @@
 /*单链表就地翻转*/
-LinkList Reverse_1(LinkList L){    
-    LNode *p, *r; 
+
+void Reverse(LinkList &L){
+    LNode *p ,*r;     //  r保存剩下需要翻转的链表
     p=L->next;
-    p->next=NULL;
+    L->next=NULL;
     while(p!=NULL){
         r=p->next;
         p->next=L->next;
         L->next=p;
-        p=r;
+        p=r
     }
     return L;
 }

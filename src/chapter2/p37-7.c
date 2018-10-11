@@ -1,17 +1,17 @@
 /*带头结点的单链表删除介于给定俩值的结点*/
 
-void RangeDelete(LinkList &L, int min, int max){
-    LNode *pr = L, *p =L->next;    //p是检测指针, pr 是其前驱
-    while(p!=NULL)
-    {
-        if(p->data>min&&p->data<max){
-            pr->next=p->next;
-            free(p);
-            p=pr->next;
+void Del_Link_4(LinkList &L, ElemType s, ElemType t){
+    LNode *q, *p=L->next, *pre=L;
+    while(p!=NULL){           //p->next可以为null
+        if(p->data>s&&p->data<t){
+            q=p;
+            p=p->next;
+            pre->next=p;
+            free(q)
         }
         else{
-            pr=p;
-            p=p->next;
+        pre=pre->next;
+        p=p->next;          // 推进 pre and p
         }
     }
 }
