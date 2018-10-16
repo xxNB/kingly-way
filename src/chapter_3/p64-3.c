@@ -15,6 +15,7 @@ bool Judge_2(LinkList L){
         i--;
         p->next;
     }
+    // i循环到头
     if(i==-1)
         return 1;
     else
