@@ -12,9 +12,9 @@ void PostOrder(BiTree T){
     else{
       GetTop(S,p);
       if(p->rchild&&p-rchild!=r){
-        p=p->child;
+        p=p->rchild;
         push(S,p);
-        p=p->child;
+        p=p->lchild;
       }
       else{
         pop(S,p);
