@@ -9,7 +9,7 @@ BiTree PreInCreat(ElmeType A[], ElemType B[], int l1, int h1, int l2, int h2){
     llen=i-l2;                        //左子树长度
     rlen=h2-i;                        //右子树长度
     if(llen)
-      root->lchild=PreInCreat(A,B,l1+1,l1++llen,l2,l2+llen-1);
+      root->lchild=PreInCreat(A,B,l1+1,l1+llen,l2,l2+llen-1);
     else
       root->lchild=NULL;
     if(rlen)

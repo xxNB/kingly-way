@@ -3,7 +3,7 @@
 int Btdepth(BiTree T){
   if(!T)
     return 0;
-  int front=-1, rear=-1;
+  int front=-1, rear=-1;        //循环队列
   int last=0,level=0           // level表示层数， last表示当前层的最右结点
   BiTree Q[MaxSize];
   Q[++rear]=T;
