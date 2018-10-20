@@ -11,5 +11,6 @@ ElemType PreNode(BiTree b, int k){
   if(ch!='#')
       return ch;
   ch=PreNpde(b->rchild, k);
-  return ch;
+  if(ch!='#')
+      return ch;
 }
