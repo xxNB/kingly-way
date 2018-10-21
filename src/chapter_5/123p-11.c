@@ -8,7 +8,7 @@ void DeleteXTree(BiTree bt){
     }
 }
 
-void Search(BiTree bt, ElemType x){
+void Search(BiTree bt, ElemType x){                 //使用一个层次遍历的方式来检查
     BiTree Q[];               //存放二叉树结点的指针
     if(bt){
         if(bt->data==x){

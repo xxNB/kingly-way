@@ -6,7 +6,7 @@ int DsonNodes(BiTree b){
   else if(b->lchild!=NULL&&b->rchild!=NULL)
     return DsonNodes(b->lchild)+DsonNodes(b->rchild)+1;     // 双分支
   else
-    return DsonNodes(b->lchild)+DsonNodes(b->rchild);
+    return DsonNodes(b->lchild)+DsonNodes(b->rchild); //   单分支继续递归，但不+1
 }
 
 

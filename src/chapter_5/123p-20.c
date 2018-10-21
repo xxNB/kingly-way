@@ -5,7 +5,7 @@ void BtreeToE(BTree *root){
 }
 
 void BtreeToExp(BTree *root, int deep){
-    if(root==NULL) return;
+    if(root==NULL) return;          // 中序遍历 ！
     else if(root->left==NULL&&root->right==NULL)
         printf("%s", root->data);
     else{

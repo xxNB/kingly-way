@@ -16,11 +16,11 @@ int BTWidth(BiTree b){
     while(Qu.front<Qu.rear){
         Qu.front++;
         p=Qu.data[Qu.front];
-        k=Qu.level[Qu.front];
+        k=Qu.level[Qu.front];           //  k被重新赋值
         if(p->lchild!=NULL){
             Qu.rear++;
             Qu.data[Qu.rear]=p->lchild;
-            Qu.level[Qu.rear]=k+1;
+            Qu.level[Qu.rear]=k+1;    // k:层数 k值并不变
         }
         if(p->rchild!=NULL){
         Qu.rear++;

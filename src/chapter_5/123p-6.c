@@ -13,7 +13,7 @@ BiTree PreInCreat(ElmeType A[], ElemType B[], int l1, int h1, int l2, int h2){
     else
       root->lchild=NULL;
     if(rlen)
-      root->rchild=PreInCreat(A,B,h1-rlen+1,h1,h2-rlen+1,h2);
+      root->rchild=PreInCreat(A,B,h1-rlen+1,h1,h2-rlen+1,h2);                 //规避根 结点 递归建立右子树
     else
       root->rchild=NULL;
     return root;

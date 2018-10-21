@@ -16,7 +16,7 @@ BiTree Ancestor(BiTree ROOT, BiTNode *p, BiTNode *q){
                 s[top].tag=0;
                 bt=bt->lchild;
             }
-        while(top!=0&&s[top].tag==1){
+        while(top!=0&&s[top].tag==1){         //  退栈的时候去检查
             if(s[top].t=p){
                 for(i=1;i<=top;i++)
                     s1[i]=s[i];

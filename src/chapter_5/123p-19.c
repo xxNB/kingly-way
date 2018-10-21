@@ -7,8 +7,8 @@ int WPL(BiTree root){
 int wpl_PreOrder(BiTree root, int deep){
     static int wpl=0;
     if(root->right==NULL&&root->rchild==NULL){
-        wpl+=deep*root->weight;
-    if(root->lchild!=NULL)
+        wpl+=deep*root->weight;             // 在叶结点累加权值
+    if(root->lchild!=NULL)                  
         wpl_PreOrder(root->lchild, deep+1);
     if(root->rchild!=NULL)
         wpl_PreOrder(root->rchild, deep+1);
