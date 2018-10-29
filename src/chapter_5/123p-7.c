@@ -14,7 +14,7 @@ bool IsComplete(BiTree T){
     else
       while(!IsEmpty(Q)){
         DeQueue(Q,p);      
-        if(p)                     // 发现空结点后，如果后续有空结点，即不为满二叉树
+        if(p)                     // 发现空结点后，如果后续有空结点，即不为完全二叉树
           return 0;
       }
   } 

@@ -22,7 +22,7 @@ void Search(BiTree bt, ElemType x){         //后序遍历方式根结点最后
               exit(1);
         }
     
-        while(top!=0&&s[top].tag==1)          // 当右结点访问过，弹出栈
+        while(top!=0&&s[top].tag==1)          // 当栈不为空且右结点访问过，弹出栈
             top--;
         if(top!=0){
             s[top].tag=1;

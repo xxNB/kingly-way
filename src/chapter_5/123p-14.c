@@ -16,7 +16,7 @@ int BTWidth(BiTree b){
     while(Qu.front<Qu.rear){
         Qu.front++;
         p=Qu.data[Qu.front];
-        k=Qu.level[Qu.front];           //  k被重新赋值
+        k=Qu.level[Qu.front];           //  k被重新赋值  记录对应指针对应的层数
         if(p->lchild!=NULL){
             Qu.rear++;
             Qu.data[Qu.rear]=p->lchild;
