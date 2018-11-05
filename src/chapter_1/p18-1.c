@@ -15,7 +15,7 @@ typedef struct{
 }SqList;
 */
 
-
+/*删除最小值，空出的位置由最后一个元素填补*/
 ElemType Del_1(Sqlist &L, ElemType &value){
     if(L.length==0)
         return false;
