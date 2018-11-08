@@ -3,7 +3,7 @@
 void selcetSort(LinkedList& L){
     LinkNode *h=L, *p, *q, *r, *s;
     L=NULL;
-    while(h!=NULL){
+    while(h!=NULL){             //h始终记录着最初L的位置
         p=s=h; q=r=NULL;
         while(p!=NULL){
             if(p->data>s->data){s=p;r=q;}
