@@ -1,8 +1,8 @@
-/*查找公共父节点*/
+/*查找p,q的最近公共父节点*/
 
 typedef struct{
     BiTree t;
-    int tag;
+    int tag;        //tag=0表示左子女被访问，tag=1表示右子女被访问
 }stack;
 
 stack s[], s1[];

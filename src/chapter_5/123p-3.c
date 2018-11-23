@@ -11,7 +11,7 @@ void PostOrder(BiTree T){
     }
     else{
       GetTop(S,p);
-      if(p->rchild&&p-rchild!=r){
+      if(p->rchild&&p->rchild!=r){
         p=p->rchild;
         push(S,p);
         p=p->lchild;
