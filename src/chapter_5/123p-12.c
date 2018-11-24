@@ -1,4 +1,4 @@
-/*二叉树打印值为x的所有结点*/
+/*二叉树打印值为x的所有祖先*/
 
 typedef struct{
     BiTree t;
