@@ -11,7 +11,7 @@ int BaseTrans(int N){
     while(top!=-1){
         i=stack[top];
         --top;
-        result=result*10+1;
+        result=result*10+i;
     }
     return result;
 }

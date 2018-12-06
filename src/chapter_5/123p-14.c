@@ -15,12 +15,12 @@ int BTWidth(BiTree b){
     Qu.level[Qu.rear]=1;
     while(Qu.front<Qu.rear){
         Qu.front++;
-        p=Qu.data[Qu.front];
-        k=Qu.level[Qu.front];           //  k被重新赋值  k:层次
+        p=Qu.data[Qu.front];            // 出队结点
+        k=Qu.level[Qu.front];           //  出队结点层次
         if(p->lchild!=NULL){
             Qu.rear++;
             Qu.data[Qu.rear]=p->lchild;
-            Qu.level[Qu.rear]=k+1;    // k:层数 k值并不变
+            Qu.level[Qu.rear]=k+1;    // 孩子结点,层次+1
         }
         if(p->rchild!=NULL){
             Qu.rear++;
@@ -32,7 +32,7 @@ int BTWidth(BiTree b){
     k=1;
     while(i<Qu.rear){
         n=0;
-        while(i<Qu.rear&&Qu.level[i]==k){
+        while(i<Qu.rear&&Qu.level[i]==k){       //层次值是连续的
             n++;
             i++;
         }
